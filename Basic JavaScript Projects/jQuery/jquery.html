@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- link to google API jQuery v.3.7.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        // selects the HTML element to append content
+        $("html").append(
+          // content to be added to the HTML
+          "<body>\
+            <div id ='container'>\
+              <div id = 'inner' >\
+                <h1>Basic jQuery</h1>\
+                <p id = '1'>Paragraph 1 </p>\
+                <p id = '2'>Paragraph 2 </p>\
+                <p id = '3'>Paragraph 3 </p>\
+              </div>\
+            </div>\
+          </body>"
+        );
+        // added CSS to the HTML element with id ='2'
+        $("#2").css({ color: "red" });
+        // click function to hide the h1 element when the element with id = 'c' is clicked
+        $("#3").click(function () {
+          $("h1").hide();
+          $("p").click(function () {
+            // When you click on a paragraph in the console the text appears
+            console.log("You clicked a paragraph!");
+            // When you click on a paragraph it dissapears from the screen
+            $("p").fadeOut(1500);
+            console.log("everything has disappeared");
+          });
+        });
+      });
+
+      // Event setup using a convenience method
+    </script>
+  </body>
+</html>
